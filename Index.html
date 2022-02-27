@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IOT</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#"></a>
+  </nav>
+
+     <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+        <button class="btn btn-success mt-4" id="systemOn">Turn system ON</button>
+        <button class="btn btn-danger mt-4" id="systemOff">Turn system OFF</button>
+        </div>
+        <div class="card-deck mt-5">
+          <div class="card">
+            <img class="card-img-top" id="pirStatus" src="/Images/systemOff.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">PIR senzor pokreta</h5>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title" id="test">Aktiviran:</h5>
+              <h6 style="text-align: center;" id="ispisPIRVrijednosti">0</h6>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" id="PIRAktiviran" aria-valuemin="0" aria-valuemax="10"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" id="MQ2Status" src="/Images/systemOff.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title" id="test">MQ2 senzor</h5>
+              <h6 style="text-align: center;" id="ispisVrijednosti">0</h6>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" id="gasValue" aria-valuemin="0" aria-valuemax="1000"></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title" id="test">Prosjek</h5>
+              <h6 style="text-align: center;" id="ispisProsjeka">0</h6>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" id="gasAverage" aria-valuemin="0" aria-valuemax="1000"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" id="flameStatus" src="/Images/systemOff.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Senzor plamena</h5>
+              <p class="card-text">Senzor je moguće aktivirati pritiskom na dugme "START", 
+                te će se vratiti na početno stanje za 3 sec.</p>
+              <button  class="btn btn-success" id="flameStart">START</button>
+              <button  class="btn btn-danger" id="flameStop">STOP</button>
+            </div>
+          </div>
+        </div>
+     </div>
+      </div>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+<script src="javaScript.js"></script>
+</body>
+</html>

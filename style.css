@@ -1,0 +1,11 @@
+body {
+  background-color: gainsboro;
+}
+.picture {
+  background-image: url("");
+}
+
+img {
+  width: 298px;
+  height: 198px;
+}
